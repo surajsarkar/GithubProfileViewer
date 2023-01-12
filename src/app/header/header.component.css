@@ -1,0 +1,40 @@
+header{
+    display: flex;
+    /* background-color: red; */
+}
+.dp{
+    border-radius: 100%;
+    border: 2px solid darkblue;
+
+    height: 120px;
+    width: 120px;
+
+    margin: 5px;
+    padding: 2px;
+    object-fit:cover;
+}
+
+.dp img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.user_info{
+    display: flex;
+    flex-direction: column;
+
+    margin: 5px;
+}
+.name{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.m-5{
+    margin: 5px;
+}
+
+.font-sm-l{
+    font-size: 0.9rem;
+    font-weight: lighter;
+}
