@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-repo-info',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./repo-info.component.css']
 })
 export class RepoInfoComponent {
+
+  @Input() repoName: string = '';
+  @Input() repoDes: string = '';
+  @Input() topics: Array<string> = ["angular", "vercel", "tutorial", "skillup"];
 
 }
