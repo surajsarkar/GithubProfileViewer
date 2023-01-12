@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  @Input() name: string = "";
+  @Input() bio: string = "";
+  @Input() location: string = "";
+  @Input() github_user_name: string = "";
+  @Input() twitter: string = "surajsarkar";
 
 }
