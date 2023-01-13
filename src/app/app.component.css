@@ -5,3 +5,7 @@
     border-radius: 8px;
     border: 2px solid black;
 }
+
+#username{
+    width: 350px;
+}
