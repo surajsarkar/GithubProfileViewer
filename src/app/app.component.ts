@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ProfileViewer';
-  repoTopic: Array<string> = [];
+  repoTopic: Array<string> = ["skillup", "trail", "building", "samurai"];
 }
