@@ -1,7 +1,7 @@
 <header class="d-flex flex-md-row flex-column mb-4">
     <div class="right_box d-flex flex-column justify-content-between align-items-center">
         <div class="dp">
-            <img src="https://avatars.githubusercontent.com/u/37933420?s=400&u=5630087eb982a70514a7963196713bcbd81d365c&v=4" alt="profile image">
+            <img src={{dp}} alt="profile image">
         </div>
         <a href="https://github.com/{{github_user_name}}" class="font-sm-l">https://github.com/{{github_user_name}}</a>
     </div>
@@ -15,8 +15,8 @@
         <span class="location m-1 font-sm-l">
             {{location}}
         </span>
-        <span *ngIf="twitter !== ''" class="twitter m-1 font-sm-l">
-            Twitter: https://twitter.com/{{twitter}}
+        <span *ngIf="twitter != null" class="twitter m-1 font-sm-l">
+            Twitter: <a href = "https://twitter.com/{{twitter}}">https://twitter.com/{{twitter}}</a>
         </span>
     </div>
 </header>
