@@ -9,7 +9,8 @@ export class HeaderComponent {
   @Input() name: string = "";
   @Input() bio: string = "";
   @Input() location: string = "";
+  @Input() dp: string = "";
   @Input() github_user_name: string = "";
-  @Input() twitter: string = "surajsarkar";
+  @Input() twitter: any = null;
 
 }
