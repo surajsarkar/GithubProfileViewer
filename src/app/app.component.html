@@ -1,12 +1,22 @@
 <div class="container p-4 mt-5">
-  <form class="mb-3">
+
+  <form class="mb-3" (ngSubmit) = "search()">
     <div class="d-flex flex-row justify-content-center">
-      <input type="text" name="username" id="username" class="form-control" placeholder="Username">
+      <input type="text" name="username" [(ngModel)]="username"id="username" class="form-control" placeholder="Username">
       <input type="submit" value="Search" class="btn btn-dark">
     </div>
   </form>
-  <app-header name="Suraj Sarkar" location="India" bio="How are you all" github_user_name="surajsarkar"></app-header>
+
+  <app-header 
+    name={{userDetails.name}} 
+    location={{userDetails.location}} 
+    bio={{userDetails.bio}}
+    dp = {{userDetails.avatar_url}}
+    github_user_name={{username}}
+    twitter = {{userDetails.twitter_username}}
+    >
+  </app-header>
   <div class="repo-box row">
-    <app-repo-info class="col-md-6 col-12 my-2" repoName="flutter-tutorial" repoDes="this is flutter tutorial" [topics]="repoTopic"></app-repo-info>
+    <app-repo-info *ngFor="let repo of userDetails.repos" class="col-md-6 col-12 my-2" repoName={{repo.name}} repoDes={{repo.description}} [topics]="repo.topics"></app-repo-info>
   </div>
 </div>
