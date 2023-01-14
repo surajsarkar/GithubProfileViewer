@@ -3,7 +3,7 @@
         <div class="dp">
             <img src={{dp}} alt="profile image">
         </div>
-        <a href="https://github.com/{{github_user_name}}" class="font-sm-l">https://github.com/{{github_user_name}}</a>
+        <a href={{profile_link}} class="font-sm-l">{{profile_link}}</a>
     </div>
     <div class="user_info">
         <span class="name m-1">
@@ -15,7 +15,7 @@
         <span class="location m-1 font-sm-l">
             {{location}}
         </span>
-        <span *ngIf="twitter != null" class="twitter m-1 font-sm-l">
+        <span *ngIf="twitter !== null || twitter !==''" class="twitter m-1 font-sm-l">
             Twitter: <a href = "https://twitter.com/{{twitter}}">https://twitter.com/{{twitter}}</a>
         </span>
     </div>

@@ -12,5 +12,6 @@ export class HeaderComponent {
   @Input() dp: string = "";
   @Input() github_user_name: string = "";
   @Input() twitter: any = null;
+  @Input() profile_link: string = '';
 
 }

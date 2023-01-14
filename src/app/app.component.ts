@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
 })
 export class AppComponent {
   title = 'ProfileViewer';
-  private apiBaseUrl = `http://localhost:5000/api/user?name=`;
+  private apiBaseUrl = `https://surajsarkar.pythonanywhere.com/api/user?name=`;
   repoTopic: Array<string> = ["skillup", "trail", "building", "samurai"];
 
   userDetails: any = {};
@@ -16,7 +16,7 @@ export class AppComponent {
   httpOptions = {
     headers: new HttpHeaders({
       "Content-Type" : "application/json",
-      "Access-Control-Allow-Origin": "http://localhost:5000/api/user"
+      "Access-Control-Allow-Origin": "https://surajsarkar.pythonanywhere.com/api/user"
     })
   }
 
@@ -26,14 +26,14 @@ export class AppComponent {
   initialScreen: boolean = true;
   user_present: boolean = false;
   loading: boolean = false;
-  
+
   search(){
     this.initialScreen = true;
     this.loading = true;
     console.log(`Username: ${this.username}`);
     const url =  `${this.apiBaseUrl}${this.username}`;
     console.log(`URL: ${url}`);
-    
+
     this.httpClint.get(url, this.httpOptions).subscribe((content) => {
       this.userDetails = content;
       this.loading = false;
