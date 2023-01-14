@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
 })
 export class AppComponent {
   title = 'ProfileViewer';
-  private apiBaseUrl = `https://surajsarkar.pythonanywhere.com/api/user?name=`;
+  private apiBaseUrl = `http://localhost:5000/api/user?name=`;
   repoTopic: Array<string> = ["skillup", "trail", "building", "samurai"];
 
   userDetails: any = {};
@@ -16,7 +16,7 @@ export class AppComponent {
   httpOptions = {
     headers: new HttpHeaders({
       "Content-Type" : "application/json",
-      "Access-Control-Allow-Origin": "https://surajsarkar.pythonanywhere.com/api/user"
+      "Access-Control-Allow-Origin": "http://localhost:5000/api/user"
     })
   }
 
