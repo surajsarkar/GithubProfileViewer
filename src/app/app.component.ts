@@ -23,15 +23,22 @@ export class AppComponent {
   constructor(private httpClint: HttpClient){}
 
   username: string = "";
+  initialScreen: boolean = true;
+  user_present: boolean = false;
+  loading: boolean = false;
   
   search(){
+    this.initialScreen = true;
+    this.loading = true;
     console.log(`Username: ${this.username}`);
     const url =  `${this.apiBaseUrl}${this.username}`;
     console.log(`URL: ${url}`);
     
     this.httpClint.get(url, this.httpOptions).subscribe((content) => {
       this.userDetails = content;
-      console.log(this.userDetails);
+      this.loading = false;
+      this.initialScreen = false;
+      this.user_present = this.userDetails.user_present;
     });
   }
 
