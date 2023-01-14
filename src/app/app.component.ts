@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
 })
 export class AppComponent {
   title = 'ProfileViewer';
-  private apiBaseUrl = `http://localhost:5000/api/user?name=`;
+  private apiBaseUrl = `http://surajsarkar.pythonanywhere.com/api/user?name=`;
   repoTopic: Array<string> = ["skillup", "trail", "building", "samurai"];
 
   userDetails: any = {};
