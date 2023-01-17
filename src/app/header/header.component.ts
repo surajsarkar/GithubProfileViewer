@@ -11,7 +11,7 @@ export class HeaderComponent {
   @Input() location: string = "";
   @Input() dp: string = "";
   @Input() github_user_name: string = "";
-  @Input() twitter: any = null;
+  @Input() twitter: string ='';
   @Input() profile_link: string = '';
 
 }
