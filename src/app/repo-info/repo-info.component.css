@@ -24,3 +24,8 @@
 
     font-weight: bold;
 }
+
+
+.repo-name a:hover{
+    color: blueviolet;
+}

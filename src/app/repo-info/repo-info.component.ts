@@ -9,6 +9,7 @@ export class RepoInfoComponent {
 
   @Input() repoName: string = '';
   @Input() repoDes: string = '';
-  @Input() topics: Array<string> = ["angular", "vercel", "tutorial", "skillup"];
+  @Input() topics: Array<string> =[];
+  @Input() repoUrl: string = "";
 
 }
