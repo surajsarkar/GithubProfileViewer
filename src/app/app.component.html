@@ -19,7 +19,7 @@
     >
   </app-header>
   <div *ngIf="!initialScreen && user_present" class="repo-box row">
-    <app-repo-info *ngFor="let repo of userDetails.repos" class="col-md-6 col-12 my-2" repoName={{repo.name}} repoDes={{repo.description}} [topics]="repo.topics"></app-repo-info>
+    <app-repo-info *ngFor="let repo of userDetails.repos" class="col-md-6 col-12 my-2" repoUrl={{repo.url}} repoName={{repo.name}} repoDes={{repo.description}} [topics]="repo.topics"></app-repo-info>
   </div>
   <div class="text-center">
     <p *ngIf="!initialScreen && !user_present" class="text-center fs-3 badge bg-primary text-wrap">No Such User Present</p>
