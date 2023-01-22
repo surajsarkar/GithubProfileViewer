@@ -1,4 +1,4 @@
-<a href="https://github-profile-surajsarkar.netlify.app">Website's Link</a>
+<a href="https://surajsarkar-github-profile-viewer.netlify.app">Website's Link</a>
 
 # Github Profile Viewer
 
